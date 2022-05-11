@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.2 - Ausrichtung und Abstände</title>
+    <style>
+        .countryname{
+            font-weight: bold;
+        }
+        .countrytb{
+            font-family: Arial, Helvetica, sans-serif;
+            border:5px solid black;
+            box-shadow: 2px 2px 2px 2px rgba(65, 65, 65, 0.277);
+        }
+        .attr{
+            font-style: italic;
+            background-color: rgba(128, 128, 128, 0.175);
+        }
+        td{
+            text-align: center;
+            padding:15px;
+            border-bottom: 1px solid black;
+        }
+        tr{
+            border-bottom: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table class="countrytb">
+        <thead>
+            <tr>
+                <th><img width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/2244px-Wikipedia-logo-v2.svg.png"></th>
+                <th><img width="100px" src="data:image/jpeg;base64,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"></th>
+                <th><img width="100px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAG1BMVEX9ERX+/v79//77AAD54eT1ZWP9AAX1ZmH9ERa3VEo2AAABCElEQVR4nO3cQW7CMAAAQbepS/7/YkAcELRC3gOKkGZOiePY1j7AYwAAAAAAAAAAAAAAAAAAsG7f96OP8Dm2bfu9e3h54T5v9Y++R//j3acac87TxXxyunkYeJ4zX3y9Dfy38tISf7Y//lSXp/HFMrECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArGC8c2y8cOy681sLDr6Fj0AAAAAAAAAAAAAAAAAAGCcAZXAYHCEpAh6AAAAAElFTkSuQmCC"></th>
+                <th><img width="100px" src="https://www.kindernetz.de/wissen/1611230920701,europa-deutschland-102~_v-16x9@2dL_-6c42aff4e68b43c7868c3240d3ebfa29867457da.jpg"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="attr">Land</td>
+                <td class="countryname">Schweiz</td>
+                <td class="countryname">Österreich</td>
+                <td class="countryname">Deutschland</td>
+            </tr>
+            <tr>
+                <td class="attr">Amtssprache</td>
+                <td>Deutsch</td>
+                <td>Deutsch</td>
+                <td>Deutsch</td>
+            </tr>
+            <tr>
+                <td class="attr">Hauptstadt</td>
+                <td>Bern</td>
+                <td>Wien</td>
+                <td>Berlin</td>
+            </tr>
+            <tr>
+                <td class="attr">Fläche</td>
+                <td>41.285 km²</td>
+                <td>83.878 km²</td>
+                <td>357.385 km²</td>
+            </tr>
+            <tr>
+                <td class="attr">Einwohner</td>
+                <td>8.4 Mio.</td>
+                <td>8.7 Mio.</td>
+                <td>82.5 Mio.</td>
+            </tr>
+            <tr>
+                <td class="attr">Staatsform</td>
+                <td>förderale Republik</td>
+                <td>Bundesrepublik</td>
+                <td>Bundesrepublik</td>
+            </tr>
+            <tr>
+                <td class="attr">Währung</td>
+                <td>Schweizer Franken</td>
+                <td>Euro</td>
+                <td>Euro</td>
+            </tr>
+            <tr>
+                <td class="attr">Internet-TLD</td>
+                <td>.ch .swiss</td>
+                <td>.at</td>
+                <td>.de</td>
+            </tr>
+            <tr>
+                <td class="attr">Telefon-Vorwahl</td>
+                <td>+41</td>
+                <td>+43</td>
+                <td>+49</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
